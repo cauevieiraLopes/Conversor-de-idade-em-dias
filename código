@@ -1,0 +1,36 @@
+#include <iostream>
+
+//atividade de converter a idade (anos), em dias!
+//pensei em realizar algo mais exato devido aos anos bissextos, mas não soube uma forma "rápida" e prática de fazer isto.
+
+using namespace std;
+int main()
+{
+	//definição das variáveis e solicitação da idade
+	int idade, anoN;
+	float idadeDias;
+	
+	cout<<"==========Convertor de Idade==========\n";
+	cout<<"Insira quantos anos você tem, para ser convertido em dias!\n";
+	cout<<"(para uma maior precisão coloque a idade que você fará este ano)\n";
+	cout<<"Idade: ";
+	cin>>idade;
+	
+	//verificar se o valor recebido não é negativo e maior que 150 (nenhum ser humano sobrevive tanto tempo)
+	cout<<"\n\n";
+	if(idade < 0 and idade > 150)
+	{
+		cout<<"A operação não pode ser feita com valores negativos";
+	}
+		else
+		{
+			//calculo para conversão e formação da tabela indicando a idade, ano de nascimento e a conversão em dias
+			idadeDias = idade * 365;
+			anoN = 2026 - idade;
+			
+			cout<<"Sua idade\tAno de nascimento\tIdade em dias\n";
+			cout<<idade<<"\t\t"<<anoN<<"\t\t\t"<<idadeDias;
+		}
+		
+return 0;
+}
